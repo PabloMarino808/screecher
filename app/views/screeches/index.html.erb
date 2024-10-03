@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Screeches" %>
+
+<h1>Screeches</h1>
+
+<div id="screeches">
+  <% @screeches.each do |screech| %>
+    <%= render screech %>
+    <p>
+      <%= link_to "Show this screech", screech %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New screech", new_screech_path %>

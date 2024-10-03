@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @screech %>
+
+<div>
+  <%= link_to "Edit this screech", edit_screech_path(@screech) %> |
+  <%= link_to "Back to screeches", screeches_path %>
+
+  <%= button_to "Destroy this screech", @screech, method: :delete %>
+</div>

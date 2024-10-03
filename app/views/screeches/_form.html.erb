@@ -1,0 +1,27 @@
+<%= form_with(model: screech) do |form| %>
+  <% if screech.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(screech.errors.count, "error") %> prohibited this screech from being saved:</h2>
+
+      <ul>
+        <% screech.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :username, style: "display: block" %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

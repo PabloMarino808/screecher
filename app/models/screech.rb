@@ -1,0 +1,2 @@
+class Screech < ApplicationRecord
+end

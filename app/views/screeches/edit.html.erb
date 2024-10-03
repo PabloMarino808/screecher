@@ -1,0 +1,12 @@
+<% content_for :title, "Editing screech" %>
+
+<h1>Editing screech</h1>
+
+<%= render "form", screech: @screech %>
+
+<br>
+
+<div>
+  <%= link_to "Show this screech", @screech %> |
+  <%= link_to "Back to screeches", screeches_path %>
+</div>
