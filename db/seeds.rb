@@ -7,3 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+100.times do
+    Screech.create(
+        description: Faker::Quote.jack_handey,
+        username: Faker::Twitter.screen_name
+    )
+end
+
+puts "tired of complaining"
