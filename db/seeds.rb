@@ -11,7 +11,7 @@
 100.times do
     Screech.create(
         description: Faker::Quote.jack_handey,
-        username: Faker::Twitter.screen_name
+        username: "@"+Faker::Twitter.screen_name
     )
 end
 

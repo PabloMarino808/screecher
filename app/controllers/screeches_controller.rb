@@ -4,6 +4,9 @@ class ScreechesController < ApplicationController
   # GET /screeches or /screeches.json
   def index
     @screeches = Screech.all
+    if params[:query_text].present?
+      @screeches = @screeches.search_full_text(params[:query_text])
+    end
   end
 
   # GET /screeches/1 or /screeches/1.json

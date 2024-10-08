@@ -1,3 +1,11 @@
 .structure {
     width: 45rem;
 }
+
+body {
+    background-color: lightgray;
+}
+
+tr {
+    border: 5px solid lightgray;
+}
