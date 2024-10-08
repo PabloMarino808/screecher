@@ -3,11 +3,11 @@
 <% content_for :title, "Screeches" %>
 
 <h1>Screeches</h1>
-<div class="my-2">
+<div class="mx-1 my-3">
   <%= form_with url: screeches_path, method: :get, class:"d-flex"  do |form| %>
-    <%= form.text_field :query_text, placeholder: "Search", value: params[:query_text], class:"input_text" %>
-    <%= form.submit "Search", class:"btn btn-dark" %>
-  <% end %>
+    <%= form.text_field :query_text, placeholder: "Search", value: params[:query_text], class:"form-control" %>
+    <%= form.submit "Search", class:"btn btn-dark mx-2" %>
+  <% end %>  
 </div>
 
 <table class="table" id="screeches">
@@ -21,25 +21,24 @@
           <%= screech.description %>
         </td>
         <td>  
-          <%= link_to screech , class:"btn" do%>
-            <i class="fa-solid fa-eye"></i>
+          <%= link_to screech , class:"btn btn-primary" do%>
+            <i class="fa-solid fa-eye fa-xs"></i>
           <% end %>
         </td>
         <td>  
-          <%= link_to edit_screech_path(screech) , class:"btn" do %> 
-            <i class="fa-solid fa-feather-pointed"></i>
+          <%= link_to edit_screech_path(screech) , class:"btn btn-success" do %> 
+            <i class="fa-solid fa-feather-pointed fa-xs"></i>
           <% end %>
         </td>
         <td>  
-          <%= button_to screech, method: :delete , class:"btn" do %>
-            <i class="fa-solid fa-trash-can"></i>
+          <%= button_to screech, method: :delete , class:"btn btn-danger" do %>
+            <i class="fa-solid fa-trash-can fa-xs"></i>
           <% end %>
         </td>
       </tr>
     <% end %>
-    
-
-
-    
   </tbody>
 </table>
+<div class="d-flex justify-content-center">
+  <%== pagy_nav(@pagy)%>
+</div>
