@@ -21,18 +21,18 @@
           <%= screech.description %>
         </td>
         <td>  
-          <%= link_to screech , class:"btn btn-primary" do%>
-            <i class="fa-solid fa-eye fa-xs"></i>
+          <%= link_to screech , class:"btn btn-outline-primary btn-sm" do%>
+            <i class="fa-solid fa-eye"></i>
           <% end %>
         </td>
         <td>  
-          <%= link_to edit_screech_path(screech) , class:"btn btn-success" do %> 
-            <i class="fa-solid fa-feather-pointed fa-xs"></i>
+          <%= link_to edit_screech_path(screech) , class:"btn btn-outline-warning btn-sm" do %> 
+            <i class="fa-solid fa-pen"></i>
           <% end %>
         </td>
         <td>  
-          <%= button_to screech, method: :delete , class:"btn btn-danger" do %>
-            <i class="fa-solid fa-trash-can fa-xs"></i>
+          <%= button_to screech, method: :delete , class:"btn btn-outline-danger btn-sm" do %>
+            <i class="fa-solid fa-trash-can"></i>
           <% end %>
         </td>
       </tr>
